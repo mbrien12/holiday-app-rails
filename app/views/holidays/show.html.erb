@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @holiday.location %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @holiday.description %>
+</p>
+
+<p>
+  <strong>Flight price:</strong>
+  <%= @holiday.flight_price %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @holiday.photo %>
+</p>
+
+<%= link_to 'Edit', edit_holiday_path(@holiday) %> |
+<%= link_to 'Back', holidays_path %>

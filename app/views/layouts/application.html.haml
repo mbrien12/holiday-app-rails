@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+%html
+  %head
+    %title FlightBooker
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': true
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Cabin+Sketch|Roboto:300,400'
+    = javascript_include_tag 'application', 'data-turbolinks-track': true
+
+  %body
+    = render "shared/header"
+    = yield

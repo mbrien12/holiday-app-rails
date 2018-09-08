@@ -1,0 +1,26 @@
+= form_with(model: holiday, local: true) do |form|
+  - if holiday.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(holiday.errors.count, "error")
+        prohibited this holiday from being saved:
+      %ul
+        - holiday.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :location
+    = form.text_field :location, id: :holiday_location
+  .field
+    = form.label :description
+    = form.text_area :description, id: :holiday_description
+  .field
+    = form.label :flight_price
+    = form.number_field :flight_price, id: :holiday_flight_price
+  .field
+    = form.label :photo
+    = form.text_field :photo, id: :holiday_photo
+
+  -# -hidden_field_tag :creator_id, id: current_user.id
+
+  .actions
+    = form.submit

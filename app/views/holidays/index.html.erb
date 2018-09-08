@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Location</th>
+      <th>Suggested by</th>
       <th>Description</th>
       <th>Flight price</th>
       <th>Photo</th>
@@ -17,6 +18,7 @@
     <% @holidays.each do |holiday| %>
       <tr>
         <td><%= holiday.location %></td>
+        <td><%= holiday.creator.first_name %></td>
         <td><%= holiday.description %></td>
         <td><%= holiday.flight_price %></td>
         <td><%= holiday.photo %></td>

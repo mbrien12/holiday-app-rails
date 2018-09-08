@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180908132237) do
+ActiveRecord::Schema.define(version: 20180908164620) do
 
   create_table "holidays", force: :cascade do |t|
     t.string "location"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180908132237) do
     t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "creator_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -27,6 +28,13 @@ ActiveRecord::Schema.define(version: 20180908132237) do
     t.string "email"
     t.string "avatar"
     t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.integer "holiday_id"
+    t.integer "voter_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

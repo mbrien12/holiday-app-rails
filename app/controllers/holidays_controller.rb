@@ -25,7 +25,8 @@ class HolidaysController < ApplicationController
   # POST /holidays
   # POST /holidays.json
   def create
-    @holiday = Holiday.new(holiday_params)
+    @creator = current_user
+    @holiday = @creator.holidays.new(holiday_params)
 
     respond_to do |format|
       if @holiday.save
@@ -70,6 +71,6 @@ class HolidaysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def holiday_params
-      params.require(:holiday).permit(:location, :description, :flight_price, :photo)
+      params.require(:holiday).permit(:location, :description, :flight_price, :photo, :creator_id)
     end
 end

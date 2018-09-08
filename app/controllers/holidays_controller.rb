@@ -25,8 +25,8 @@ class HolidaysController < ApplicationController
   # POST /holidays
   # POST /holidays.json
   def create
-    @creator = current_user
-    @holiday = @creator.holidays.new(holiday_params)
+    @holiday = Holiday.new(holiday_params)
+    @holiday.creator_id = current_user.id
 
     respond_to do |format|
       if @holiday.save

@@ -1,4 +1,17 @@
+$primary-color: #5D38DB
+  
 a
   text-decoration: none
   &:visited
     text-decoration: none
+
+.button-main
+  width: 15%
+  padding: 15px
+  radius: 2px
+  color: white
+  background-color: $primary-color
+  outline: none
+
+  &:hover
+    background-color: lighten($primary-color, 10%)

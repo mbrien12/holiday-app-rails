@@ -1,7 +1,8 @@
-%h1 HEADER
-- if current_user
-  %p= "Hi #{current_user.first_name}"
-  = link_to 'Logout', logout_path
-- else
-  = link_to 'Login', login_path
-  = link_to 'Signup', signup_path
+.header
+  %h1 HEADER
+  - if current_user
+    %p= "Hi #{current_user.first_name}"
+    = link_to 'Logout', logout_path
+  - else
+    = link_to 'Login', login_path
+    = link_to 'Signup', signup_path

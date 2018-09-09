@@ -1,16 +1,19 @@
-%h1 Sign up
+.container-signup-position
+  =image_tag("user_login_graphic.png")
+  %h1 Create account
 
-=form_for @user do |f|
-  =f.label :first_name
-  =f.text_field :first_name
+  .form-signup-position
+    =form_for @user do |f|
+      =f.label :first_name
+      =f.text_field :first_name,  :placeholder => "Cliff"
 
-  =f.label :last_name
-  =f.text_field :last_name
+      =f.label :last_name
+      =f.text_field :last_name, :placeholder => "Richard"
 
-  =f.label :email
-  =f.text_field :email
+      =f.label :email
+      =f.text_field :email, :placeholder => "cliff@richard.com"
 
-  =f.label :password
-  =f.text_field :password
+      =f.label :password
+      =f.text_field :password, :placeholder => "*******"
 
-  =f.submit "Sign up"
+      =f.submit "Create account", :class => 'button-main button-signup-form'

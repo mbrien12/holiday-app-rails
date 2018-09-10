@@ -1,8 +1,8 @@
 .header
-  %h1 LOLIDAY PLANNER
+  %h1= link_to "LOLIDAY PLANNER", root_path, :id => "header-title"
   .header-links-position
     - if current_user
-      %p= "Hi #{current_user.first_name}"
+      %p= "Hi #{current_user.first_name} 👋"
       = link_to 'Logout', logout_path
     - else
       = link_to 'Signup', signup_path

@@ -1,6 +1,12 @@
-%h1 Log in 
+.container-signup-position
+  =image_tag("user_login_graphic.png")
+  %h1 Sign in
 
-=form_for(:session, url: login_path) do |f|
-  =f.email_field :email, :placeholder => "Email"
-  =f.password_field :password, :placeholder => "Password"
-  =f.submit "Log in"
+  .form-signup-position
+    =form_for(:session, url: login_path) do |f|
+      =f.email_field :email, :placeholder => "Email"
+      =f.password_field :password, :placeholder => "Password"
+      =f.submit "Log in", :class => 'button-main button-signup-form'
+
+
+

@@ -1,3 +1,5 @@
+$primary-color: #5D38DB
+
 .header
   display: flex
   align-items: center
@@ -13,7 +15,7 @@
     color: black
     margin: 20px
     &:hover
-      color: #5D38DB
+      color: $primary-color
 
 #header-title 
   text-decoration: none
@@ -25,3 +27,6 @@
 
   p 
     font-size: 20px
+
+  .active
+    color: $primary-color

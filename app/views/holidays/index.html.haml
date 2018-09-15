@@ -1,0 +1,31 @@
+%p#notice 
+
+.holidays-container
+  .holidays-container-header
+    %h1 Holidays
+    = button_to "Add holiday", new_holiday_path, :method => :get, class: 'button-main'
+
+  .holidays-table
+    %table
+      %thead
+        %tr
+          %th 
+          %th Location
+          %th Description
+          %th Approx flight price
+          %th Votes
+          %th 
+        %tbody
+          - @holidays.each_with_index do |holiday, i|
+            %tr
+              %td= i + 1  
+              %td= holiday.location
+              %td= holiday.description
+              %td= holiday.flight_price
+              %td Add votes here
+
+
+
+-# <td><%= link_to 'Show', holiday %></td>
+-# <td><%= link_to 'Edit', edit_holiday_path(holiday) %></td>
+-# <td><%= link_to 'Destroy', holiday, method: :delete, data: { confirm: 'Are you sure?' } %></td>

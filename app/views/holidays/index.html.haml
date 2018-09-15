@@ -11,8 +11,8 @@
         %tr
           %th 
           %th Location
-          %th Description
-          %th Approx flight price
+          %th Why go here?
+          %th Flight price
           %th Votes
           %th 
         %tbody
@@ -21,8 +21,9 @@
               %td= i + 1  
               %td= holiday.location
               %td= holiday.description
-              %td= holiday.flight_price
-              %td Add votes here
+              %td= "£ #{holiday.flight_price}"
+              %td= rand(0..9) 
+              %td= link_to 'Edit', edit_holiday_path(holiday)
 
 
 

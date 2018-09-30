@@ -2,7 +2,6 @@
 
 .holidays-container
   .holidays-container-header
-    %h1 Holidays
     = button_to "Add holiday", new_holiday_path, :method => :get, class: 'button-main'
 
   .holidays-table
@@ -10,7 +9,7 @@
       %thead
         %tr
           %th 
-          %th Location
+          %th 
           %th Why go here?
           %th Flight price
           %th Votes

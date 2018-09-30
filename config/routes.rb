@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :holidays
   resources :users
+  resources :votes
   
   root 'pages#home'
   get 'home' => 'pages#home'

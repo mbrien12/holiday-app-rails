@@ -12,6 +12,7 @@
           %th 
           %th Why go here?
           %th Flight price
+          %th Added by
           %th Votes
           %th 
         %tbody
@@ -21,8 +22,13 @@
               %td= holiday.location
               %td= holiday.description
               %td= "£ #{holiday.flight_price}"
-              %td= rand(0..9) 
-              %td= link_to 'Edit', edit_holiday_path(holiday)
+              %td= holiday.creator.first_name
+              %td= holiday.votes.count 
+              %td
+                - if current_user.id == holiday.creator.id
+                  = link_to 'Edit', edit_holiday_path(holiday)
+                - else
+                  = link_to 'Vote', votes_path(voter_id: current_user.id, holiday_id: holiday.id), method: 'post'
 
 
 

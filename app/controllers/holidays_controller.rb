@@ -5,7 +5,7 @@ class HolidaysController < ApplicationController
   # GET /holidays
   # GET /holidays.json
   def index
-    @holidays = Holiday.all
+    @holidays = Holiday.ordered_by_vote
   end
 
   # GET /holidays/1

@@ -11,16 +11,31 @@
     = form.label :location
     = form.text_field :location, id: :holiday_location
   .field
-    = form.label "Why go here?"
+    = form.label 'Why go here?'
     = form.text_area :description, id: :holiday_description
   .field
-    = form.label :flight_price
+    = form.label 'How much roughly are flights?'
     = form.number_field :flight_price, id: :holiday_flight_price
-  .field
-    = form.label :photo
-    = form.text_field :photo, id: :holiday_photo
+  -# .field
+  -#   = form.label :photo
+  -#   = form.text_field :photo, id: :holiday_photo
 
   -# -hidden_field_tag :creator_id, id: current_user.id
 
-  .actions
+  .actions#holiday-button.hidden
     = form.submit
+
+:javascript
+  const holidayForm = document.getElementById('new-holiday-form')
+  let locationField = document.getElementById('holiday_location')
+  let descriptionField = document.getElementById('holiday_description')
+  let flightPriceField = document.getElementById('holiday_flight_price')
+
+  holidayForm.addEventListener('change', function() {
+    console.log(flightPriceField.value)
+  })
+
+  
+
+  
+

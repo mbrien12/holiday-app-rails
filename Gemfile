@@ -34,6 +34,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 gem 'haml'
+gem 'inline_svg'
 gem 'jquery-rails'
 
 group :development, :test do

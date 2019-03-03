@@ -1,8 +1,8 @@
-.container-signup-position
-  =image_tag("user_login_graphic.png")
+.form-container-position
+  = inline_svg 'undraw_welcome_3gvl.svg', class: 'form-illustration'
   %h1 Sign in
 
-  .form-signup-position
+  .form-position
     =form_for(:session, url: login_path) do |f|
       =f.email_field :email, :placeholder => "Email"
       =f.password_field :password, :placeholder => "Password"

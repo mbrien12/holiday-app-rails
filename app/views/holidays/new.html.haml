@@ -1,5 +1,7 @@
-%h1 New Holiday 
+.form-container-position
+  .form-illustration-container
+    = inline_svg 'undraw_departing_lsgy.svg', class: 'form-illustration'
+    %h1 Suggest a holiday
 
-=render 'form', holiday: @holiday
-=link_to 'Back', holidays_path
-
+  .form-position#new-holiday-form
+    =render 'form', holiday: @holiday

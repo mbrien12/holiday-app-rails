@@ -1,7 +1,9 @@
-$primary-color: #5D38DB
+$primary-color: #3525E6
+$secondary-color: #8EEDC7
+$neutral-color: #D9E2EC
 
 h1 
-  font-weight: lighter
+  font-weight: bold
   font-size: 30px
   
 a
@@ -10,13 +12,29 @@ a
 
 .button-main
   padding: 15px
-  radius: 2px
   color: white
   background-color: $primary-color
   outline: none
+  border-radius: 5px
 
   &:hover
     background-color: lighten($primary-color, 10%)
+
+.button-secondary
+  @extend .button-main
+  background-color: $secondary-color
+  color: white
+
+  &:hover
+    background-color: lighten($secondary-color, 10%)
+
+.button-neutral
+  @extend .button-main
+  background-color: $neutral-color
+  color: #243B53
+
+  &:hover
+    background-color: lighten($neutral-color, 5%)
   
 .alert-error 
   background-color: #f2dede
